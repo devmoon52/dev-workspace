@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@import "react-datepicker/dist/react-datepicker.css";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f0f0;
+  font-size-adjust: 0.54;
+}
+
+.heading-font {
+  font-family: "Sora", sans-serif;
+}
+
+#nprogress .bar {
+  background: #1a68b6 !important;
+  z-index: 9999 !important;
+}
+
+/* scrollbar design */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slowSpin {
+  animation: slowSpin 4s linear infinite;
+}
+@keyframes slowSpin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media (width <= 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+.smScroll::-webkit-scrollbar {
+  width: 4px;
+}
+.smScrollVr::-webkit-scrollbar {
+  height: 4px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(103, 192, 144, 0.7);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(103, 192, 144);
+}
+
+/* date picker styles */
+.react-datepicker {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.react-datepicker__header {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.react-datepicker__day--selected {
+  background: #0ea5e9;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+
+/* modern range for setting/asset-manager/section 1 */
+.modernRange {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 999px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Track */
+.modernRange::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #124170 0%,
+    #124170 var(--progress),
+    #d1d5db var(--progress),
+    #d1d5db 100%
+  );
+}
+
+/* Thumb */
+.modernRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 999px;
+
+  background: white;
+  border: 3px solid #124170;
+
+  margin-top: -6px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.15s ease;
+}
+
+.modernRange::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.modernRange::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+}
